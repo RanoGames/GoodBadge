@@ -26,7 +26,7 @@ def Test(request):
 
 
 def MainPage(request):
-    return render(request, 'testpage.html')
+    return render(request, 'MainMenu.html')
 
 
 urlpatterns = [
