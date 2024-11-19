@@ -19,6 +19,13 @@ from django.urls import path
 from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render
+from django.utils.translation import ngettext
+from django.utils.translation import gettext as _
+
+
+def Adminka(request):
+    output = _("Your password must contain at least 123 character.")
+    return HttpResponse(output)
 
 
 def Test(request):
@@ -30,7 +37,7 @@ def MainPage(request):
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', Adminka),
     path('Test/', Test),
     path('', MainPage),
 ]
